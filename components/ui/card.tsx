@@ -7,5 +7,5 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
  * @param props.children Elementos renderizados dentro del card.
  */
 export function Card({ className, ...props }: CardProps) {
-  return <div className={cn('glass-panel', className)} {...props} />;
+  return <div className={cn('glass-panel relative overflow-hidden', className)} {...props} />;
 }

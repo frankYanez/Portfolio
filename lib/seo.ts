@@ -1,3 +1,5 @@
+import { themeTokens } from './theme';
+
 export const siteConfig = {
   name: 'TODO: Nombre Futurista',
   title: 'TODO: Nombre Futurista — Desarrollador Frontend',
@@ -83,6 +85,6 @@ export const defaultMetadata = {
     follow: true
   },
   other: {
-    'theme-color': '#05060d'
+    'theme-color': themeTokens.colors.background
   }
 };

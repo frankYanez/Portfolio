@@ -9,6 +9,7 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    '^reactbits$': '<rootDir>/lib/vendor/reactbits.tsx',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   }
 };

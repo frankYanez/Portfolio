@@ -4,6 +4,13 @@
 
 :root {
   color-scheme: dark;
+  --bg-root: theme('colors.background');
+  --bg-surface: theme('colors.surface');
+  --bg-surface-alt: theme('colors.surfaceAlt');
+  --text-foreground: theme('colors.foreground');
+  --text-muted: theme('colors.muted');
+  --accent-gold: theme('colors.primary.DEFAULT');
+  --accent-gold-soft: theme('colors.accent');
 }
 
 html {
@@ -13,18 +20,21 @@ html {
 @layer base {
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: theme('backgroundImage.gradient-radial'),
-      theme('backgroundImage.gradient-conic');
-    background-blend-mode: lighten;
+    background: var(--bg-root);
+    background-image: theme('backgroundImage.gradient-radial'), theme('backgroundImage.gradient-conic');
+    background-blend-mode: screen;
     min-height: 100vh;
+    position: relative;
+    isolation: isolate;
   }
 
   a {
-    @apply text-primary underline-offset-4 transition hover:underline;
+    @apply text-primary underline-offset-4 transition hover:text-accent;
   }
 
-  .focus-visible {
-    outline: 2px dashed theme('colors.accent');
+  .focus-visible,
+  :focus-visible {
+    outline: 2px solid var(--accent-gold);
     outline-offset: 3px;
   }
 }
@@ -35,7 +45,8 @@ html {
   }
 
   .glass-panel {
-    @apply rounded-3xl border border-white/10 bg-white/5 p-6 shadow-frosted backdrop-blur-xl;
+    @apply rounded-3xl border border-white/10 bg-surface/90 p-6 shadow-frosted backdrop-blur-2xl;
+    background-image: linear-gradient(135deg, rgba(240, 198, 116, 0.08), transparent);
   }
 
   .fade-divider {

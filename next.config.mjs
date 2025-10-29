@@ -1,7 +1,3 @@
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,6 +6,13 @@ const nextConfig = {
   },
   images: {
     formats: ['image/avif', 'image/webp']
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...(config.resolve.alias ?? {}),
+      reactbits: new URL('./lib/vendor/reactbits.tsx', import.meta.url).pathname
+    };
+    return config;
   }
 };
 
