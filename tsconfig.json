@@ -20,9 +20,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "reactbits": ["./lib/vendor/reactbits"]
     },
     "types": [
       "jest",

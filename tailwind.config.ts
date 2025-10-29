@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { themeTokens } from './lib/theme';
 
 const config: Config = {
   darkMode: 'class',
@@ -6,21 +7,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#05060d',
-        foreground: '#f4f6ff',
+        background: themeTokens.colors.background,
+        surface: themeTokens.colors.surface,
+        surfaceAlt: themeTokens.colors.surfaceAlt,
+        foreground: themeTokens.colors.foreground,
+        muted: themeTokens.colors.muted,
         primary: {
-          DEFAULT: '#7c5cff',
-          foreground: '#0b0d1a'
+          DEFAULT: themeTokens.colors.gold,
+          foreground: themeTokens.colors.background
         },
-        accent: '#24e1ff'
+        accent: themeTokens.colors.goldSoft
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(circle at top, rgba(124,92,255,0.35), transparent)',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, rgba(36,225,255,0.45), transparent)'
+        'gradient-radial': themeTokens.gradients.backdrop,
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, rgba(80,60,20,0.3), transparent 65%)'
       },
       boxShadow: {
-        glow: '0 0 40px rgba(124,92,255,0.35)',
-        frosted: '0 25px 80px rgba(9, 10, 25, 0.65)'
+        glow: themeTokens.shadows.glow,
+        frosted: themeTokens.shadows.depth
       }
     }
   },

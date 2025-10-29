@@ -18,10 +18,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', asChild = false, ...props }, ref) => {
     const styles = {
       primary:
-        'bg-primary text-primary-foreground shadow-glow hover:shadow-lg hover:shadow-primary/50',
+        'bg-primary text-primary-foreground shadow-glow hover:shadow-[0_0_28px_rgba(240,198,116,0.45)] focus-visible:ring-2 focus-visible:ring-primary/70',
       secondary:
-        'border border-white/20 bg-white/10 text-foreground hover:bg-white/20',
-      ghost: 'text-foreground hover:bg-white/10'
+        'border border-accent/30 bg-surfaceAlt/60 text-foreground hover:bg-surfaceAlt/80',
+      ghost: 'text-foreground hover:text-primary hover:bg-surfaceAlt/60'
     } satisfies Record<ButtonVariant, string>;
 
     const Component = asChild ? Slot : 'button';

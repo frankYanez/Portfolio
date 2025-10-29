@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { defaultMetadata, jsonLd } from '@/lib/seo';
 import { MotionProvider } from '@/components/providers/motion-provider';
+import { FuturisticBackground } from '@/components/backgrounds/futuristic-background';
 
 export const metadata: Metadata = defaultMetadata;
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground">
+        <FuturisticBackground />
         <MotionProvider>{children}</MotionProvider>
         <script
           type="application/ld+json"
