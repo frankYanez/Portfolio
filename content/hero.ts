@@ -1,14 +1,14 @@
 export const heroContent = {
-  name: 'TODO: Nombre Futurista',
-  title: 'TODO: Visionario del Frontend y experiencias inmersivas',
+  name: "Francisco Yañez",
+  title: "Desarrollador Frontend y creador de experiencias digitales inmersivas",
   subtitle:
-    'TODO: Frase de impacto sobre creación de interfaces humanas, accesibles y de alto rendimiento.',
+    "Fusiono diseño, tecnología y emoción para construir interfaces modernas, accesibles y de alto rendimiento. Mi misión: transformar ideas en experiencias interactivas que dejan huella.",
   primaryCta: {
-    label: 'Ver proyectos',
-    href: '#proyectos'
+    label: "Ver proyectos",
+    href: "#proyectos",
   },
   secondaryCta: {
-    label: 'Contactar',
-    href: '#contacto'
-  }
+    label: "Contactar",
+    href: "#contacto",
+  },
 };

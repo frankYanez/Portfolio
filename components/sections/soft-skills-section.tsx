@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
-import { Brain, MessageCircle, Users } from 'lucide-react';
+import { Brain, MessageCircle, Users, CheckCircle, BookOpen } from 'lucide-react';
 import { softSkills } from '@/content/soft-skills';
 import { Card } from '@/components/ui/card';
 import { reveal } from '@/lib/animations';
@@ -10,7 +10,9 @@ import { reveal } from '@/lib/animations';
 const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   users: Users,
   cpu: Brain,
-  'message-circle': MessageCircle
+  'message-circle': MessageCircle,
+  'check-circle': CheckCircle,
+  'book-open': BookOpen,
 };
 
 /**
@@ -23,13 +25,13 @@ export function SoftSkillsSection() {
       <div className="section-container">
         <motion.div {...reveal('up')} className="max-w-2xl">
           <h2 id="soft-skills-title" className="text-3xl font-semibold text-white">
-            Forma de trabajar
+            Soft Skills
           </h2>
           <p className="mt-4 text-white/70">
             TODO: Mensaje sobre cultura de colaboración, liderazgo y delivery continuo.
           </p>
         </motion.div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3 hover:border-y-amber-500">
           {softSkills.map((item) => {
             const Icon = iconMap[item.icon] ?? Users;
             return (

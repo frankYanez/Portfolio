@@ -4,17 +4,21 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import { useReducedMotion, motion } from 'framer-motion';
 import { ReactbitsBackground } from 'reactbits';
+import LiquidEther from '@/src/Backgrounds/LiquidEther/LiquidEther';
 
-const LazyGlintCanvas = dynamic(() => import('./glint-canvas').then((mod) => mod.GlintCanvas), {
-  ssr: false,
-  loading: () => (
-    <div
-      data-testid="glint-loading"
-      className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent"
-      aria-hidden
-    />
-  )
-});
+const LazyGlintCanvas = dynamic(
+  () => import('./glint-canvas').then((mod) => mod.GlintCanvas),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        data-testid="glint-loading"
+        className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 /**
  * FuturisticBackground mezcla efectos inspirados en reactbits y un campo 3D ligero.
@@ -30,7 +34,10 @@ export function FuturisticBackground() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: 'easeOut' }}
     >
-      <ReactbitsBackground className="opacity-70" intensity={shouldReduceMotion ? 0.4 : 1} />
+      <ReactbitsBackground
+        className="opacity-70"
+        intensity={shouldReduceMotion ? 0.4 : 1}
+      />
       {shouldReduceMotion ? (
         <div
           data-testid="reduced-motion-overlay"
@@ -38,7 +45,8 @@ export function FuturisticBackground() {
         />
       ) : (
         <Suspense fallback={<div className="absolute inset-0" aria-hidden />}>
-          <LazyGlintCanvas />
+          {/* <LazyGlintCanvas /> */}
+          <LiquidEther />
         </Suspense>
       )}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />

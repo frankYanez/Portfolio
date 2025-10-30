@@ -14,9 +14,19 @@ export function SkillsSection() {
   return (
     <section id="habilidades" aria-labelledby="skills-title" className="py-24">
       <div className="section-container">
-        <motion.div className="space-y-6" initial="hidden" whileInView="show" variants={staggerChildren} viewport={{ once: true }}>
-          <motion.h2 id="skills-title" className="text-3xl font-semibold" variants={fadeInUp}>
-            Tecnologías nucleares
+        <motion.div
+          className="space-y-6"
+          initial="hidden"
+          whileInView="show"
+          variants={staggerChildren}
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            id="skills-title"
+            className="text-3xl font-semibold"
+            variants={fadeInUp}
+          >
+            Tecnologias desarolladas
           </motion.h2>
           <motion.p className="max-w-2xl text-white/70" variants={fadeInUp}>
             TODO: Narrativa sobre cómo estas herramientas potencian resultados medibles.
