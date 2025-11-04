@@ -17,7 +17,8 @@ export function TimelineSection() {
             Experiencia
           </h2>
           <p className="mt-4 text-white/70">
-            Resumen sobre evolución profesional y visión futura.
+            Trayectoria construyendo productos digitales de punta a punta: desde startups que buscan validar rápido hasta
+            corporativos que necesitan automatizar operaciones complejas.
           </p>
         </motion.div>
         <div className="mt-12 border-l border-white/20 pl-6">

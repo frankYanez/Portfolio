@@ -27,7 +27,8 @@ export function TestimonialsSection() {
               Testimonios
             </h2>
             <p className="mt-3 max-w-xl text-white/70">
-              TODO: Invitación a explorar feedback de colaboradores y clientes.
+              Voces de quienes han construido productos y automatizaciones conmigo: enfoque en métricas, colaboración fluida y
+              delivery constante.
             </p>
           </div>
           <div className="flex gap-3">

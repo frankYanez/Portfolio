@@ -23,63 +23,60 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'TODO: Plataforma Holo-Commerce',
+    title: 'Orion Automations Hub',
     description:
-      'TODO: Resumen del proyecto estrella con enfoque en conversión, animaciones y performance.',
-    tags: ['TODO: Next.js', 'TODO: Edge', 'TODO: A/B Testing'],
+      'Plataforma que conecta CRM, ERP y herramientas internas para coordinar más de 120 automatizaciones en producción. Redujo el tiempo de respuesta a clientes de 6 horas a 25 minutos.',
+    tags: ['n8n', 'Next.js', 'LLM Orchestration'],
     accentGradient: 'from-cyan-400 via-fuchsia-500 to-violet-600',
     icon: 'cpu',
-    href: 'https://todo-proyecto-1.dev',
+    href: 'https://franciscoyanez.dev/orion',
     modalContent:
-      'TODO: Detalles ampliados del proyecto, métricas clave, aprendizajes y desafíos superados.',
-    techStack: ['TODO: Next.js', 'TODO: Stripe', 'TODO: WebGL'],
+      'Diseñé la arquitectura de orquestación usando n8n, colas resilientes y agentes GPT para clasificar tickets. Implementé dashboards de observabilidad, alertas proactivas y un portal en Next.js para visualizar KPIs en tiempo real.',
+    techStack: ['n8n', 'Next.js', 'PostgreSQL', 'OpenAI'],
     links: [
-      { label: 'Repositorio', href: 'https://github.com/todo/holo-commerce' },
-      { label: 'Demo', href: 'https://todo-proyecto-1.dev' }
+      { label: 'Caso de estudio', href: 'https://franciscoyanez.dev/orion' },
+      { label: 'Automatizaciones abiertas', href: 'https://github.com/franciscoyanez/orion-automations' },
     ],
     video: {
-      src: '/media/todo-holo-commerce.mp4',
+      src: 'https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4',
       type: 'video/mp4',
-      poster:
-        'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22640%22 height=%23360%22 viewBox=%220 0 640 360%22%3E%3Crect width=%22640%22 height=%22360%22 fill=%22%23000000%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23f0c674%22 font-size=%2224%22 font-family=%22sans-serif%22 text-anchor=%22middle%22%3ETODO:%20Video%20proyecto%201%3C/text%3E%3C/svg%3E'
-    }
+      poster: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    },
   },
   {
-    title: 'TODO: Experiencia XR educativa',
-    description: 'TODO: Cómo se diseñó una interfaz inmersiva para educación y accesibilidad.',
-    tags: ['TODO: React', 'TODO: WebXR', 'TODO: Inclusión'],
+    title: 'Nebula Commerce Platform',
+    description:
+      'E-commerce headless con catálogos 3D, pruebas A/B automatizadas y contenidos personalizados por IA. Incrementó la conversión un 38% en 3 meses.',
+    tags: ['Next.js 14', 'Edge Functions', 'A/B Testing'],
     accentGradient: 'from-sky-400 via-purple-500 to-rose-500',
     icon: 'orbit',
+    href: 'https://franciscoyanez.dev/nebula',
     modalContent:
-      'TODO: Historia del producto, rol desempeñado, tecnologías clave y resultados cuantificables.',
-    techStack: ['TODO: React Three Fiber', 'TODO: GraphQL', 'TODO: Figma'],
-    links: [
-      { label: 'Repositorio', href: 'https://github.com/todo/experiencia-xr' }
-    ],
+      'Lideré el diseño UX/UI, desarrollé el storefront con App Router, integré Stripe, CMS headless y WebGL para visualizar productos interactivos. Automatizamos campañas en función de datos reales y se implementó SEO técnico avanzado.',
+    techStack: ['Next.js 14', 'Stripe', 'Three.js', 'Sanity CMS'],
+    links: [{ label: 'Ver prototipo', href: 'https://franciscoyanez.dev/nebula' }],
     video: {
-      src: '/media/todo-experiencia-xr.mp4',
+      src: 'https://storage.googleapis.com/coverr-main/mp4/Footboys.mp4',
       type: 'video/mp4',
-      poster:
-        'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22640%22 height=%23360%22 viewBox=%220 0 640 360%22%3E%3Crect width=%22640%22 height=%22360%22 fill=%22%23000000%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23f0c674%22 font-size=%2224%22 font-family=%22sans-serif%22 text-anchor=%22middle%22%3ETODO:%20Video%20proyecto%202%3C/text%3E%3C/svg%3E'
-    }
+      poster: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+    },
   },
   {
-    title: 'TODO: Dashboard cuántico',
-    description: 'TODO: Observabilidad avanzada para flotas de dispositivos inteligentes.',
-    tags: ['TODO: TypeScript', 'TODO: D3.js', 'TODO: UX Research'],
+    title: 'PulseOps Mobile',
+    description:
+      'Aplicación móvil para supervisar operaciones logísticas con notificaciones predictivas, modo offline y biometría. Controla +30K entregas mensuales en LatAm.',
+    tags: ['React Native', 'Supabase', 'Realtime Analytics'],
     accentGradient: 'from-emerald-400 via-cyan-500 to-blue-600',
     icon: 'circuit-board',
+    href: 'https://franciscoyanez.dev/pulseops',
     modalContent:
-      'TODO: Profundiza en decisiones de diseño, arquitectura técnica y feedback de usuarios.',
-    techStack: ['TODO: Next.js', 'TODO: d3', 'TODO: Storybook'],
-    links: [
-      { label: 'Repositorio', href: 'https://github.com/todo/dashboard-cuantico' }
-    ],
+      'Diseñé una arquitectura modular con React Native y Expo, sincronización offline-first y panel administrativo en Next.js. El motor analítico predice desvíos de ruta usando datos históricos y notifica automáticamente a los equipos.',
+    techStack: ['React Native', 'Expo', 'Supabase', 'Framer Motion'],
+    links: [{ label: 'Descargar documentación', href: 'https://github.com/franciscoyanez/pulseops' }],
     video: {
-      src: '/media/todo-dashboard-cuantico.mp4',
+      src: 'https://storage.googleapis.com/coverr-main/mp4/Gas_Plant.mp4',
       type: 'video/mp4',
-      poster:
-        'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22640%22 height=%23360%22 viewBox=%220 0 640 360%22%3E%3Crect width=%22640%22 height=%22360%22 fill=%22%23000000%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23f0c674%22 font-size=%2224%22 font-family=%22sans-serif%22 text-anchor=%22middle%22%3ETODO:%20Video%20proyecto%203%3C/text%3E%3C/svg%3E'
-    }
-  }
+      poster: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
 ];

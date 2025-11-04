@@ -29,11 +29,10 @@ export const softSkills = [
       'El mundo del desarrollo evoluciona cada día, y yo con él. Me mantengo en constante actualización sobre nuevas herramientas, patrones y tecnologías que elevan la calidad del producto final.',
     icon: 'book-open',
   },
- {
-  title: 'Visión arquitectónica',
-  description:
-    'Pienso cada proyecto como un sistema vivo: modular, escalable y coherente. Diseño arquitecturas frontend que favorecen la mantenibilidad, el rendimiento y la integración fluida con otros servicios, siempre priorizando la experiencia del usuario.',
-  icon: 'layers',
-}
-
+  {
+    title: 'Visión arquitectónica',
+    description:
+      'Pienso cada proyecto como un sistema vivo: modular, escalable y coherente. Diseño arquitecturas frontend que favorecen la mantenibilidad, el rendimiento y la integración fluida con otros servicios.',
+    icon: 'layers',
+  },
 ];

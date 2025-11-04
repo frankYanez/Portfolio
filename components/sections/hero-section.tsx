@@ -6,6 +6,8 @@ import { heroContent } from '@/content/hero';
 import { Button } from '@/components/ui/button';
 import { reveal } from '@/lib/animations';
 import ProfileCard from '@/src/Components/ProfileCard/ProfileCard';
+import { HeroParallax } from '@/src/Components/ui/hero-parallax';
+import { heroParallaxProducts } from '@/content/hero-parallax';
 
 /**
  * HeroSection presenta la introducción principal con CTA y fondo animado.
@@ -40,10 +42,10 @@ export function HeroSection() {
       {/* Contenido principal */}
       <div
         className="
-          py-28 sm:py-36 
-          flex flex-col-reverse md:flex-row 
-          items-center md:items-start 
-          justify-between 
+          py-28 sm:py-36
+          flex flex-col-reverse md:flex-row
+          items-center md:items-start
+          justify-between
           gap-16 md:gap-20
           max-w-7xl mx-auto px-6 sm:px-12
         "
@@ -108,6 +110,9 @@ export function HeroSection() {
         >
           <ProfileCard avatarUrl="/assets/avatar.jpg" />
         </motion.div>
+      </div>
+      <div className="mx-auto mt-20 max-w-6xl px-6 sm:px-12">
+        <HeroParallax products={heroParallaxProducts} />
       </div>
     </section>
   );

@@ -26,10 +26,11 @@ export function SkillsSection() {
             className="text-3xl font-semibold"
             variants={fadeInUp}
           >
-            Tecnologias desarolladas
+            Tecnologías que uso para escalar productos reales
           </motion.h2>
           <motion.p className="max-w-2xl text-white/70" variants={fadeInUp}>
-            TODO: Narrativa sobre cómo estas herramientas potencian resultados medibles.
+            Cada herramienta responde a una métrica: tiempos de carga inferiores a un segundo, flujos automatizados que ahorran
+            horas de operación y experiencias accesibles para todos los usuarios.
           </motion.p>
           <motion.div className="flex flex-wrap gap-3" variants={fadeInUp}>
             {skillBadges.map((badge) => (
