@@ -21,6 +21,7 @@ export default function HomePage() {
         <HeroSection />
         <ServicesSection />
         <SkillsSection />
+        <HeroParallax products={products} />
         <SoftSkillsSection />
         <ProjectsSection />
         <TimelineSection />
