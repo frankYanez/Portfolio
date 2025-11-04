@@ -29,11 +29,11 @@ export const ProjectVideo = memo(function ProjectVideo({ video, title }: Project
         aria-label={`Demo en video de ${title}`}
       >
         <source src={video.src} type={video.type} />
-        Tu navegador no soporta el video HTML5. TODO: Proporcionar enlace alternativo.
+        Tu navegador no soporta el video HTML5. Puedes descargar la demo directamente desde {video.src}.
       </video>
       {shouldReduceMotion ? (
         <p className="absolute inset-x-4 bottom-4 rounded-full bg-black/70 px-4 py-2 text-center text-xs text-white/70">
-          Reproducción pausada por preferencias de movimiento. TODO: Pulsa play para ver el video.
+          Reproducción pausada por preferencias de movimiento. Pulsa play si deseas explorar la demo manualmente.
         </p>
       ) : null}
     </div>

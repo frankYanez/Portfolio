@@ -1,13 +1,15 @@
 export const footerLinks = {
   nav: [
     { label: 'Inicio', href: '#inicio' },
+    { label: 'Servicios', href: '#servicios' },
     { label: 'Proyectos', href: '#proyectos' },
-    { label: 'Contacto', href: '#contacto' }
+    { label: 'Experiencia', href: '#experiencia' },
+    { label: 'Contacto', href: '#contacto' },
   ],
   socials: [
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/todo' },
-    { label: 'GitHub', href: 'https://github.com/todo' },
-    { label: 'X', href: 'https://x.com/todo' }
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/franciscoyanez' },
+    { label: 'GitHub', href: 'https://github.com/franciscoyanez' },
+    { label: 'X', href: 'https://x.com/franyanez' },
   ],
-  legal: '© ' + new Date().getFullYear() + ' TODO: Nombre Futurista. Todos los derechos reservados.'
+  legal: '© ' + new Date().getFullYear() + ' Francisco Yañez. Todos los derechos reservados.',
 };

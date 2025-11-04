@@ -1,6 +1,6 @@
-# Portfolio Futurista (Next.js + Tailwind)
+# Portafolio Futurista — Francisco Yañez
 
-Landing de portafolio altamente animada construida con Next.js 14, Tailwind CSS y Framer Motion. Todo el contenido está en español y marcado con `TODO:` para facilitar la personalización.
+Landing inmersiva construida con Next.js 14, Tailwind CSS y Framer Motion para mostrar servicios de automatización, desarrollo web y aplicaciones. Todo el contenido está optimizado para SEO en español.
 
 ## Requisitos
 
@@ -16,12 +16,13 @@ npm run dev
 
 Visita `http://localhost:3000` para ver el sitio.
 
-## Personalización rápida
+## Contenido editable
 
 | Área | Archivo |
 | --- | --- |
 | Datos personales, CTAs | `content/hero.ts` |
 | Habilidades técnicas y badges | `content/skills.ts` |
+| Servicios destacados (cards futuristas) | `content/services.ts` |
 | Soft skills | `content/soft-skills.ts` |
 | Proyectos destacados (tarjetas + modal) | `content/projects.ts` |
 | Experiencia / timeline | `content/timeline.ts` |
@@ -29,7 +30,7 @@ Visita `http://localhost:3000` para ver el sitio.
 | Contacto final | `content/contact.ts` |
 | Footer (navegación y redes) | `content/footer.ts` |
 | SEO global (títulos, descripciones, JSON-LD) | `lib/seo.ts` |
-| Colores y estilos base | `tailwind.config.ts`, `app/globals.css` |
+| Contenido del Hero Parallax | `content/hero-parallax.ts` |
 
 ### Visuales, OG e icono
 
@@ -41,7 +42,7 @@ Visita `http://localhost:3000` para ver el sitio.
 
 - Variantes de animación centralizadas en `lib/animations.ts`.
 - Las secciones utilizan `framer-motion` con `prefers-reduced-motion` respetado vía `MotionConfig`.
-- Todos los componentes siguen jerarquía semántica y estados de foco visibles.
+- Componentes de UI con jerarquía semántica y estados de foco visibles.
 
 ## Scripts npm
 

@@ -37,7 +37,8 @@ export function ProjectsSection() {
             Proyectos destacados
           </h2>
           <p className="mt-4 text-white/70">
-            TODO: Texto inspirador resaltando impacto, métricas y colaboración.
+            Selección de iniciativas donde combiné automatización, desarrollo web y mobile para mejorar indicadores clave: más
+            ventas, menos soporte manual y experiencias que deleitan a los usuarios.
           </p>
         </motion.div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">

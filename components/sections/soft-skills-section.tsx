@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
-import { Brain, MessageCircle, Users, CheckCircle, BookOpen } from 'lucide-react';
+import { Brain, MessageCircle, Users, CheckCircle, BookOpen, Layers } from 'lucide-react';
 import { softSkills } from '@/content/soft-skills';
 import { Card } from '@/components/ui/card';
 import { reveal } from '@/lib/animations';
@@ -13,6 +13,7 @@ const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   'message-circle': MessageCircle,
   'check-circle': CheckCircle,
   'book-open': BookOpen,
+  layers: Layers,
 };
 
 /**
@@ -28,7 +29,8 @@ export function SoftSkillsSection() {
             Soft Skills
           </h2>
           <p className="mt-4 text-white/70">
-            TODO: Mensaje sobre cultura de colaboración, liderazgo y delivery continuo.
+            La tecnología solo funciona cuando los equipos confían. Estas habilidades blandas me ayudan a liderar con claridad,
+            acompañar procesos de cambio y entregar productos con impacto medible.
           </p>
         </motion.div>
         <div className="mt-12 grid gap-6 md:grid-cols-3 hover:border-y-amber-500">
