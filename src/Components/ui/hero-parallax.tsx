@@ -5,12 +5,13 @@ import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMemo, useRef } from 'react';
 import { cn } from '@/lib/utils';
+import { Card } from '@/components/ui/card';
 
 export type HeroParallaxItem = {
   title: string;
   href: string;
-  category: string;
-  description: string;
+  category?: string;
+  description?: string;
   thumbnail: string;
 };
 
@@ -33,11 +34,14 @@ function ParallaxCard({
 }) {
   return (
     <Link
-      href={item.href}
+      href={item.thumbnail}
       className="group relative flex h-72 w-72 flex-none flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-4 shadow-[0_20px_60px_-40px_rgba(56,189,248,0.35)] backdrop-blur transition-transform duration-500 hover:-translate-y-6 hover:border-primary/60 hover:shadow-[0_30px_80px_-40px_rgba(129,140,248,0.65)]"
       aria-label={`${item.title} — ${item.category}`}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-white/[0.02]" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-white/[0.02]"
+        aria-hidden="true"
+      />
       <div className="relative h-40 w-full overflow-hidden rounded-2xl">
         <Image
           src={item.thumbnail}
@@ -136,7 +140,8 @@ export function HeroParallax({ products, className }: HeroParallaxProps) {
           transition={{ delay: 0.1, duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          Cada pieza acelera flujos, reduce errores manuales y crea experiencias digitales que evolucionan con el negocio.
+          Cada pieza acelera flujos, reduce errores manuales y crea experiencias digitales
+          que evolucionan con el negocio.
         </motion.p>
       </div>
       <div className="mt-14 space-y-8 overflow-hidden">
@@ -148,11 +153,7 @@ export function HeroParallax({ products, className }: HeroParallaxProps) {
           variants={rowVariants}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          {rows.first.map((item, index) => (
-            <ParallaxCard key={`${item.title}-${index}`} item={item} priority={index === 0} />
-          ))}
-        </motion.div>
+        ></motion.div>
         <motion.div
           style={{ x: secondRowX }}
           className="flex min-w-max gap-6"

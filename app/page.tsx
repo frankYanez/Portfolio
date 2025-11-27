@@ -9,19 +9,19 @@ import { TimelineSection } from '@/components/sections/timeline-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { ContactSection } from '@/components/sections/contact-section';
 import { ServicesSection } from '@/components/sections/services-section';
+
 /**
  * Página principal que compone todas las secciones del landing futurista.
  * @returns Landing page completa.
  */
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col gap-24">
+    <div className="flex min-h-screen flex-col ">
       <Header />
       <main className="flex flex-col gap-24">
         <HeroSection />
         <ServicesSection />
         <SkillsSection />
-        <HeroParallax products={products} />
         <SoftSkillsSection />
         <ProjectsSection />
         <TimelineSection />

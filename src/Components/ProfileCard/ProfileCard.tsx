@@ -108,8 +108,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         '--pointer-from-center': `${clamp(Math.hypot(percentY - 50, percentX - 50) / 50, 0, 1)}`,
         '--pointer-from-top': `${percentY / 50}`,
         '--pointer-from-left': `${percentX / 50}`,
-        '--rotate-x': `${round(-(centerX / 5))}deg`,
-        '--rotate-y': `${round(centerY / 4)}deg`,
+        '--rotate-x': `${round(-(centerX / 3))}deg`,
+        '--rotate-y': `${round(centerY / 2)}deg`,
       };
 
       Object.entries(properties).forEach(([property, value]) => {
@@ -324,7 +324,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               width={200}
               height={200}
               className="avatar"
-              src={avatarUrl}
+              src={require('/assets/avatar-profile.jpg')}
               alt={`${name || 'User'} avatar`}
               loading="lazy"
               onError={(e) => {

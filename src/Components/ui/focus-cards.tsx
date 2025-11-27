@@ -38,15 +38,18 @@ export function FocusCards({ cards }: { cards: FocusCardItem[] }) {
           whileHover={{ y: -12, scale: 1.01 }}
         >
           <div className="absolute inset-0 opacity-40 transition duration-500 group-hover:opacity-60">
-            <Image
+            {/* <Image
               src={card.image}
               alt={card.title}
               fill
               sizes="(max-width: 768px) 90vw, 22rem"
               className="object-cover"
-            />
+            /> */}
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-transparent"
+            aria-hidden="true"
+          />
           <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-70">
             <div className="h-full w-full bg-[radial-gradient(circle_at_top,rgba(129,140,248,0.45),transparent_55%)]" />
           </div>
@@ -60,8 +63,13 @@ export function FocusCards({ cards }: { cards: FocusCardItem[] }) {
             </div>
             <dl className="grid gap-3 text-sm text-white/60">
               {card.metrics.map((metric) => (
-                <div key={metric.label} className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3 backdrop-blur">
-                  <dt className="text-xs uppercase tracking-widest text-white/50">{metric.label}</dt>
+                <div
+                  key={metric.label}
+                  className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3 backdrop-blur"
+                >
+                  <dt className="text-xs uppercase tracking-widest text-white/50">
+                    {metric.label}
+                  </dt>
                   <dd className="text-sm font-semibold text-white">{metric.value}</dd>
                 </div>
               ))}
