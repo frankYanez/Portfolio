@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { testimonials } from '@/content/testimonials';
+import { TestimonialsContent } from '@/content/testimonials';
 import { AnimatedTestimonials } from '@/src/Components/ui/modern-testimonials-slider';
 import { fadeInUp, staggerChildren } from '@/lib/animations';
 
@@ -29,7 +29,7 @@ export function TestimonialsSection() {
             </motion.p>
           </div>
 
-          <AnimatedTestimonials testimonials={testimonials} autoplay />
+          <AnimatedTestimonials testimonials={TestimonialsContent} autoplay />
         </motion.div>
       </div>
     </section>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://todo-portfolio.dev
+
+# Sitemaps
+Sitemap: https://todo-portfolio.dev/sitemap.xml
