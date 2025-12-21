@@ -3,10 +3,10 @@ import { MotionProps } from 'framer-motion';
 type Direction = 'up' | 'down' | 'left' | 'right';
 
 const offsets: Record<Direction, { x: number; y: number }> = {
-  up: { x: 0, y: 24 },
-  down: { x: 0, y: -24 },
-  left: { x: 24, y: 0 },
-  right: { x: -24, y: 0 }
+  up: { x: 0, y: 12 },
+  down: { x: 0, y: -12 },
+  left: { x: 12, y: 0 },
+  right: { x: -12, y: 0 }
 };
 
 export const reveal = (direction: Direction = 'up'): MotionProps => ({
@@ -22,8 +22,8 @@ export const reveal = (direction: Direction = 'up'): MotionProps => ({
   },
   viewport: { once: true, margin: '0px 0px -100px' },
   transition: {
-    duration: 0.7,
-    ease: [0.25, 0.1, 0.25, 1]
+    duration: 0.9,
+    ease: [0.22, 0.61, 0.36, 1]
   }
 });
 
@@ -37,13 +37,13 @@ export const staggerChildren = {
 };
 
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1]
+      duration: 0.8,
+      ease: [0.22, 0.61, 0.36, 1]
     }
   }
 };

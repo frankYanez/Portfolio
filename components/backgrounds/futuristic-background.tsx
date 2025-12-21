@@ -13,7 +13,7 @@ const LazyGlintCanvas = dynamic(
     loading: () => (
       <div
         data-testid="glint-loading"
-        className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-br from-primary/60 via-transparent to-transparent"
         aria-hidden
       />
     ),
@@ -30,25 +30,36 @@ export function FuturisticBackground() {
     <motion.div
       aria-hidden
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0.4 }}
+      animate={{ opacity: 0.5 }}
       transition={{ duration: 1.2, ease: 'easeOut' }}
     >
       <ReactbitsBackground
-        className="opacity-70"
+        className="opacity-30"
         intensity={shouldReduceMotion ? 0.4 : 1}
       />
-      {shouldReduceMotion ? (
-        <div
-          data-testid="reduced-motion-overlay"
-          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(240,198,116,0.18),transparent_55%)]"
+
+      <Suspense fallback={<div className="absolute inset-0" aria-hidden />}>
+        {/* <LazyGlintCanvas  /> */}
+        <LiquidEther
+          colors={['#f0c674', '#d3a94e', '#FFF8E1']}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.3}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
         />
-      ) : (
-        <Suspense fallback={<div className="absolute inset-0" aria-hidden />}>
-          {/* <LazyGlintCanvas /> */}
-          <LiquidEther />
-        </Suspense>
-      )}
+      </Suspense>
+
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
     </motion.div>
   );

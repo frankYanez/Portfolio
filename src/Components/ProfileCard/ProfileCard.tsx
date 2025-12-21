@@ -1,5 +1,5 @@
 /*
-	Installed from https://reactbits.dev/ts/default/
+  Installed from https://reactbits.dev/ts/default/
 */
 
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
@@ -220,7 +220,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       animationHandlers.updateCardTransform(
         card.clientHeight / 2 + gamma * mobileTiltSensitivity,
         card.clientWidth / 2 +
-          (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
+        (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
         card,
         wrap,
       );

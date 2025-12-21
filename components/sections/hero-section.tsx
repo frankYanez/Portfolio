@@ -6,8 +6,7 @@ import { heroContent } from '@/content/hero';
 import { Button } from '@/components/ui/button';
 import { reveal } from '@/lib/animations';
 import ProfileCard from '@/src/Components/ProfileCard/ProfileCard';
-import { HeroParallax } from '@/src/Components/ui/hero-parallax';
-import { heroParallaxProducts } from '@/content/hero-parallax';
+
 
 const stats = [
   { label: 'Proyectos lanzados', value: '+40' },
@@ -44,7 +43,7 @@ export function HeroSection() {
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-24 sm:px-10 sm:pt-28 lg:flex-row lg:items-start lg:gap-10 lg:px-12">
-        <div className="flex-1 space-y-8 text-center lg:text-left">
+        <div className="flex-1 space-y-8 text-center lg:text-left ">
           <motion.span
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.35em] text-white/80 shadow-[0_10px_40px_-30px_rgba(129,140,248,0.8)]"
             {...reveal('up')}
@@ -63,7 +62,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="text-lg font-semibold text-white/90 sm:text-xl"
+            className="text-lg font-semibold text-white/90 sm:text-xl "
             {...reveal('up')}
             transition={{ delay: 0.18, duration: 0.7 }}
           >
@@ -148,14 +147,14 @@ export function HeroSection() {
             avatarUrl={require('/assets/avatar-profile.jpg')}
             miniAvatarUrl={require('/assets/avatar-profile.jpg')}
             name={heroContent.name}
-            title={heroContent.title}
+            // title={heroContent.title}
             handle="yanez.frank"
             status="Disponible · GMT-5"
             contactText="Conversemos"
             className="max-w-[420px]"
             enableMobileTilt
-            // behindGradient="radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(265, 86%, 74%, var(--card-opacity)) 5%,hsla(221, 83%, 69%, calc(var(--card-opacity)*0.8)) 15%,hsla(200, 87%, 64%, calc(var(--card-opacity)*0.45)) 55%,hsla(200, 64%, 40%, 0) 100%),radial-gradient(40% 50% at 20% 20%, #7c3aedc7 0%, #00000000 100%),radial-gradient(70% 70% at 80% 60%, #22d3eecc 0%, #00000000 90%),conic-gradient(from 124deg at 50% 50%,#8b5cf6 0%,#22d3ee 40%,#22d3ee 60%,#ffff 100%)"
-            // innerGradient="linear-gradient(140deg, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.75) 100%)"
+          // behindGradient="radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(265, 86%, 74%, var(--card-opacity)) 5%,hsla(221, 83%, 69%, calc(var(--card-opacity)*0.8)) 15%,hsla(200, 87%, 64%, calc(var(--card-opacity)*0.45)) 55%,hsla(200, 64%, 40%, 0) 100%),radial-gradient(40% 50% at 20% 20%, #7c3aedc7 0%, #00000000 100%),radial-gradient(70% 70% at 80% 60%, #22d3eecc 0%, #00000000 90%),conic-gradient(from 124deg at 50% 50%,#8b5cf6 0%,#22d3ee 40%,#22d3ee 60%,#ffff 100%)"
+          // innerGradient="linear-gradient(140deg, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.75) 100%)"
           />
         </motion.div>
       </div>

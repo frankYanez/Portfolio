@@ -14,8 +14,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'aceternity.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.simpleicons.org',
       }
-  ],
+    ],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   webpack: (config) => {
     config.resolve.alias = {

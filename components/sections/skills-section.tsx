@@ -5,6 +5,7 @@ import { skillBadges, skillGroups } from '@/content/skills';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { fadeInUp, reveal, staggerChildren } from '@/lib/animations';
+import Image from 'next/image';
 
 /**
  * SkillsSection muestra habilidades técnicas destacadas en una cuadrícula animada.
@@ -40,28 +41,42 @@ export function SkillsSection() {
             ))}
           </motion.div>
         </motion.div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 ">
           {Object.entries(skillGroups).map(([group, skills]) => (
             <motion.div key={group} {...reveal('up')} className="space-y-4">
               <h3 className="text-xl font-semibold text-white">{group}</h3>
-              {skills.map((skill) => (
-                <Card key={skill.name} className="transition hover:bg-white/10">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-lg font-medium text-white">{skill.name}</p>
-                      <p className="text-sm text-white/60">{skill.description}</p>
+              <div className="grid grid-cols-1 gap-4 ">
+                {skills.map((skill) => (
+                  <Card key={skill.name} className="flex flex-col h-48 transition hover:bg-white/10 bg-black">
+                    <div className="flex items-start justify-between gap-4 flex-1">
+                      <div className="flex items-start gap-4 flex-1">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                          <Image
+                            src={skill.icon}
+                            alt={`${skill.name} icon`}
+                            className="w-7 h-7 object-contain"
+                            width={24}
+                            height={24}
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-lg font-medium text-white">{skill.name}</p>
+                          <p className="text-sm text-white/60">{skill.description}</p>
+                        </div>
+                      </div>
+                      <Badge tone="primary">{skill.level}</Badge>
                     </div>
-                    <Badge tone="primary">{skill.level}</Badge>
-                  </div>
-                  <p className="mt-3 text-xs uppercase tracking-widest text-white/40">
-                    {skill.category}
-                  </p>
-                </Card>
-              ))}
+                    <p className="mt-3 text-xs uppercase tracking-widest text-white/40">
+                      {skill.category}
+                    </p>
+                  </Card>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
+
     </section>
   );
 }

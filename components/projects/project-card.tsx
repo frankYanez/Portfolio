@@ -67,42 +67,45 @@ export function ProjectCard({ project, Icon, onOpen }: ProjectCardProps) {
           shouldReduceMotion
             ? undefined
             : {
-                rotateX,
-                rotateY,
-                transformPerspective: 900
-              }
+              rotateX,
+              rotateY,
+              transformPerspective: 900
+            }
         }
         transition={{ type: 'spring', stiffness: 160, damping: 18 }}
       >
-        <Card className="flex h-full flex-col gap-5 bg-surface/90 p-6 transition-all duration-300 group-hover:border-accent/40 group-focus-visible:border-accent">
-        <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/5">
-          <div className={`absolute inset-0 bg-gradient-to-br ${project.accentGradient} opacity-70`} />
-          <motion.div
-            className="relative flex h-full items-center justify-center"
-            style={shouldReduceMotion ? undefined : { scale: glintScale }}
-          >
-            <Icon className="h-16 w-16 text-primary drop-shadow-[0_0_25px_rgba(240,198,116,0.5)]" aria-hidden="true" />
-          </motion.div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-            <p className="text-sm text-white/60">{project.description}</p>
+        <Card className="flex h-[500px] flex-col gap-5 bg-surface/90 p-6 transition-all duration-300 group-hover:border-accent/40 group-focus-visible:border-accent">
+          <div className="relative h-48 w-full flex-shrink-0 overflow-hidden rounded-2xl border border-white/5">
+            <div className={`absolute inset-0 bg-gradient-to-br ${project.accentGradient} opacity-70`} />
+            <motion.div
+              className="relative flex h-full items-center justify-center"
+              style={shouldReduceMotion ? undefined : { scale: glintScale }}
+            >
+              <Icon className="h-16 w-16 text-primary drop-shadow-[0_0_25px_rgba(240,198,116,0.5)]" aria-hidden="true" />
+            </motion.div>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <Badge key={tag} tone="accent">
-                {tag}
-              </Badge>
-            ))}
+          <div className="flex flex-1 flex-col gap-4">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-foreground line-clamp-1">{project.title}</h3>
+              <p className="text-sm text-white/60 line-clamp-3">{project.description}</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.slice(0, 3).map((tag) => (
+                <Badge key={tag} tone="accent">
+                  {tag}
+                </Badge>
+              ))}
+              {project.tags.length > 3 && (
+                <Badge tone="accent">+{project.tags.length - 3}</Badge>
+              )}
+            </div>
+            {primaryLink ? (
+              <span className="mt-auto flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-accent/80">
+                <span>{primaryLink.label}</span>
+                <span aria-hidden>↗</span>
+              </span>
+            ) : null}
           </div>
-          {primaryLink ? (
-            <span className="mt-auto flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-accent/80">
-              <span>{primaryLink.label}</span>
-              <span aria-hidden>↗</span>
-            </span>
-          ) : null}
-        </div>
         </Card>
       </motion.div>
     </motion.button>

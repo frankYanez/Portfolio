@@ -20,8 +20,12 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "reactbits": ["./lib/vendor/reactbits"]
+      "@/*": [
+        "./*"
+      ],
+      "reactbits": [
+        "./lib/vendor/reactbits"
+      ]
     },
     "types": [
       "jest",
@@ -43,5 +47,5 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }

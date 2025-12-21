@@ -23,19 +23,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Orion Automations Hub',
+    title: 'Suelto y Confio',
     description:
-      'Plataforma que conecta CRM, ERP y herramientas internas para coordinar más de 120 automatizaciones en producción. Redujo el tiempo de respuesta a clientes de 6 horas a 25 minutos.',
-    tags: ['n8n', 'Next.js', 'LLM Orchestration'],
+      'Ecommerce para comercio de articulos de limpieza. Cuenta con pagos online y carrito de compras',
+    tags: ['React', 'Next.js', 'Stripe'],
     accentGradient: 'from-cyan-400 via-fuchsia-500 to-violet-600',
     icon: 'cpu',
-    href: 'https://franciscoyanez.dev/orion',
+    href: 'https://sueltoyconfio.com/',
     modalContent:
       'Diseñé la arquitectura de orquestación usando n8n, colas resilientes y agentes GPT para clasificar tickets. Implementé dashboards de observabilidad, alertas proactivas y un portal en Next.js para visualizar KPIs en tiempo real.',
-    techStack: ['n8n', 'Next.js', 'PostgreSQL', 'OpenAI'],
+    techStack: ['React', 'Next.js', 'Stripe', 'PostgreSQL', 'OpenAI'],
     links: [
-      { label: 'Caso de estudio', href: 'https://franciscoyanez.dev/orion' },
-      { label: 'Automatizaciones abiertas', href: 'https://github.com/franciscoyanez/orion-automations' },
+      { label: 'Ver sitio', href: 'https://sueltoyconfio.com/' },
+      { label: 'Ver codigo', href: 'https://github.com/franciscoyanez/orion-automations' },
     ],
     video: {
       src: 'https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4',
@@ -62,9 +62,9 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'PulseOps Mobile',
+    title: 'Bouquet Limpieza',
     description:
-      'Aplicación móvil para supervisar operaciones logísticas con notificaciones predictivas, modo offline y biometría. Controla +30K entregas mensuales en LatAm.',
+      'Ecommerce para comercio de articulos de limpieza. Cuenta con pagos online y carrito de compras',
     tags: ['React Native', 'Supabase', 'Realtime Analytics'],
     accentGradient: 'from-emerald-400 via-cyan-500 to-blue-600',
     icon: 'circuit-board',
@@ -73,6 +73,60 @@ export const projects: Project[] = [
       'Diseñé una arquitectura modular con React Native y Expo, sincronización offline-first y panel administrativo en Next.js. El motor analítico predice desvíos de ruta usando datos históricos y notifica automáticamente a los equipos.',
     techStack: ['React Native', 'Expo', 'Supabase', 'Framer Motion'],
     links: [{ label: 'Descargar documentación', href: 'https://github.com/franciscoyanez/pulseops' }],
+    video: {
+      src: 'https://storage.googleapis.com/coverr-main/mp4/Gas_Plant.mp4',
+      type: 'video/mp4',
+      poster: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    title: 'Luxe Fragancias',
+    description:
+      'Ecommerce para comercio de perfumeria Arabe. Cuenta con pagos online y carrito de compras',
+    tags: ['React Native', 'Supabase', 'Realtime Analytics'],
+    accentGradient: 'from-emerald-400 via-cyan-500 to-blue-600',
+    icon: 'circuit-board',
+    href: 'https://luxefragancias.com/',
+    modalContent:
+      'Diseñé una arquitectura modular con React Native y Expo, sincronización offline-first y panel administrativo en Next.js. El motor analítico predice desvíos de ruta usando datos históricos y notifica automáticamente a los equipos.',
+    techStack: ['React Native', 'Expo', 'Supabase', 'Framer Motion'],
+    links: [{ label: 'Ver sitio', href: 'https://luxefragancias.com/' }],
+    video: {
+      src: 'https://storage.googleapis.com/coverr-main/mp4/Gas_Plant.mp4',
+      type: 'video/mp4',
+      poster: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    title: 'Luxe Fragancias Automatizacion',
+    description:
+      'Automatizaciones para comercio de perfumeria Arabe. Cuenta con pagos online y carrito de compras',
+    tags: ['React Native', 'Supabase', 'Realtime Analytics'],
+    accentGradient: 'from-emerald-400 via-cyan-500 to-blue-600',
+    icon: 'circuit-board',
+    href: 'https://luxefragancias.com/',
+    modalContent:
+      'Diseñé una arquitectura modular con React Native y Expo, sincronización offline-first y panel administrativo en Next.js. El motor analítico predice desvíos de ruta usando datos históricos y notifica automáticamente a los equipos.',
+    techStack: ['React Native', 'Expo', 'Supabase', 'Framer Motion'],
+    links: [{ label: 'Ver sitio', href: 'https://luxefragancias.com/' }],
+    video: {
+      src: 'https://storage.googleapis.com/coverr-main/mp4/Gas_Plant.mp4',
+      type: 'video/mp4',
+      poster: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    title: 'Bosko App',
+    description:
+      'Aplicacion para la busqueda de empleo en la ciudad de Tandil',
+    tags: ['React Native', 'Supabase', 'Realtime Analytics'],
+    accentGradient: 'from-emerald-400 via-cyan-500 to-blue-600',
+    icon: 'circuit-board',
+    href: 'https://boskoapp.com/',
+    modalContent:
+      'Diseñé una arquitectura modular con React Native y Expo, sincronización offline-first y panel administrativo en Next.js. El motor analítico predice desvíos de ruta usando datos históricos y notifica automáticamente a los equipos.',
+    techStack: ['React Native', 'Expo', 'Supabase', 'Framer Motion'],
+    links: [{ label: 'Ver codigo', href: 'https://github.com/frankYanez/frontend-bosko' }],
     video: {
       src: 'https://storage.googleapis.com/coverr-main/mp4/Gas_Plant.mp4',
       type: 'video/mp4',

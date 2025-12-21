@@ -75,7 +75,7 @@ export function FocusCards({ cards }: { cards: FocusCardItem[] }) {
               ))}
             </dl>
             <Link
-              href={card.href}
+              href={card.href as any}
               className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:gap-3"
             >
               Ver caso

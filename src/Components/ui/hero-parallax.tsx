@@ -34,7 +34,7 @@ function ParallaxCard({
 }) {
   return (
     <Link
-      href={item.thumbnail}
+      href={item.thumbnail as any}
       className="group relative flex h-72 w-72 flex-none flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-4 shadow-[0_20px_60px_-40px_rgba(56,189,248,0.35)] backdrop-blur transition-transform duration-500 hover:-translate-y-6 hover:border-primary/60 hover:shadow-[0_30px_80px_-40px_rgba(129,140,248,0.65)]"
       aria-label={`${item.title} — ${item.category}`}
     >
