@@ -108,7 +108,7 @@ export const AnimatedTestimonials = ({
                                             <IconQuote className="text-[#FFD700] w-8 h-8 opacity-80" />
                                         </div>
                                         <p className="opacity-90 text-lg leading-relaxed font-light text-white overflow-y-auto pr-2 custom-scrollbar">
-                                            "{testimonials[active].quote}"
+                                            {testimonials[active].quote}
                                         </p>
                                     </div>
 

@@ -1,4 +1,11 @@
-export const testimonials = [
+export type TestimonialContent = {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+};
+
+export const TestimonialsContent: TestimonialContent[] = [
   {
     quote:
       "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",

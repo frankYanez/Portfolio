@@ -132,7 +132,7 @@ export const AnimatedTestimonials = ({
               className="relative space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6 text-left text-white shadow-[0_20px_80px_-60px_rgba(0,0,0,1)] backdrop-blur"
             >
               <motion.div className="text-lg leading-relaxed text-white/80 sm:text-xl">
-                {activeItem.quote.split(" ").map((word, index) => (
+                {activeItem.quote.split(" ").map((word: string, index: number) => (
                   <motion.span
                     key={`${word}-${index}`}
                     initial={{ opacity: 0, y: 8, filter: "blur(8px)" }}

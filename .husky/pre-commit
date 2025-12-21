@@ -1,5 +1,0 @@
-#!/bin/sh
-
-
-npm run -s lint
-npm run -s typecheck
