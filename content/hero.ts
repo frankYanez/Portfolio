@@ -9,6 +9,6 @@ export const heroContent = {
   },
   secondaryCta: {
     label: 'Agendar una llamada',
-    href: '#contacto',
+    href: 'https://wa.link/haiipp',
   },
 };

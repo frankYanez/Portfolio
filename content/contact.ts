@@ -6,15 +6,15 @@ export const contactContent = {
   socialButtons: [
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/franciscoyanez',
+      href: 'www.linkedin.com/in/frank-yanez-developer',
     },
     {
       label: 'GitHub',
-      href: 'https://github.com/franciscoyanez',
+      href: 'https://github.com/frankYanez',
     },
     {
-      label: 'Calendly',
-      href: 'https://cal.com/franciscoyanez/30min',
+      label: 'Instagram',
+      href: 'https://www.instagram.com/yanez.frank',
     },
   ],
 };
