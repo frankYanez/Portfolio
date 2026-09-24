@@ -18,17 +18,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', asChild = false, ...props }, ref) => {
     const styles = {
       primary:
-        'bg-primary text-primary-foreground shadow-glow hover:shadow-[0_0_28px_rgba(240,198,116,0.45)] focus-visible:ring-2 focus-visible:ring-primary/70',
+        'bg-gradient-accent text-primary-foreground shadow-glow hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0 active:scale-[0.97] focus-visible:ring-2 focus-visible:ring-primary/70',
       secondary:
-        'border border-accent/30 bg-surfaceAlt/60 text-foreground hover:bg-surfaceAlt/80',
-      ghost: 'text-foreground hover:text-primary hover:bg-surfaceAlt/60'
+        'border border-border/10 bg-surfaceAlt/60 text-foreground shadow-glassSm backdrop-blur-xl hover:-translate-y-0.5 hover:bg-surfaceAlt/90 hover:shadow-glass active:translate-y-0 active:scale-[0.97]',
+      ghost:
+        'border border-transparent text-foreground hover:-translate-y-0.5 hover:border-border/10 hover:bg-surfaceAlt/60 hover:shadow-glassSm hover:backdrop-blur-xl active:translate-y-0 active:scale-[0.97]'
     } satisfies Record<ButtonVariant, string>;
 
     const Component = asChild ? Slot : 'button';
 
     const componentProps = {
       className: cn(
-        'inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
+        // Sheen de vidrio: highlight superior duro (::before) + transform para la sensación de "flotar" al hover/press.
+        'relative isolate inline-flex items-center gap-2 overflow-hidden rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-1/2 before:rounded-t-full before:bg-gradient-to-b before:from-white/35 before:to-transparent before:content-[\'\'] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
         styles[variant],
         className
       ),

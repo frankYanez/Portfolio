@@ -7,7 +7,7 @@ export const siteConfig = {
     'Ingeniero de software especializado en automatizaciones con IA, productos web en Next.js y aplicaciones móviles que aceleran operaciones. Trabajo con startups y equipos corporativos para lanzar experiencias medibles y escalables.',
   url: 'https://franciscoyanez.dev',
   locale: 'es-CL',
-  email: 'mailto:hola@franciscoyanez.dev',
+  email: 'mailto:frankyanez9413@gmail.com',
   social: {
     github: 'https://github.com/franciscoyanez',
     linkedin: 'https://www.linkedin.com/in/franciscoyanez',
@@ -103,6 +103,6 @@ export const defaultMetadata = {
     follow: true
   },
   other: {
-    'theme-color': themeTokens.colors.background
+    'theme-color': `rgb(${themeTokens.light.background})`
   }
 };

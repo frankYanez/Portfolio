@@ -75,19 +75,29 @@ export function ProjectCard({ project, Icon, onOpen }: ProjectCardProps) {
         transition={{ type: 'spring', stiffness: 160, damping: 18 }}
       >
         <Card className="flex h-[500px] flex-col gap-5 bg-surface/90 p-6 transition-all duration-300 group-hover:border-accent/40 group-focus-visible:border-accent">
-          <div className="relative h-48 w-full flex-shrink-0 overflow-hidden rounded-2xl border border-white/5">
+          <div className="relative h-48 w-full flex-shrink-0 overflow-hidden rounded-2xl border border-border/10">
             <div className={`absolute inset-0 bg-gradient-to-br ${project.accentGradient} opacity-70`} />
+            {/* eslint-disable-next-line @next/next/no-img-element -- screenshot remoto dinámico (microlink/github), no apto para el optimizador de next/image */}
+            <img
+              src={project.image}
+              alt={`Captura de pantalla de ${project.title}`}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover mix-blend-luminosity opacity-80 transition-opacity duration-300 group-hover:opacity-100 group-hover:mix-blend-normal"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-surface/90 via-surface/10 to-transparent" />
             <motion.div
-              className="relative flex h-full items-center justify-center"
+              className="relative flex h-full items-end justify-start p-3"
               style={shouldReduceMotion ? undefined : { scale: glintScale }}
             >
-              <Icon className="h-16 w-16 text-primary drop-shadow-[0_0_25px_rgba(240,198,116,0.5)]" aria-hidden="true" />
+              <span className="glass-chip flex h-10 w-10 items-center justify-center rounded-xl">
+                <Icon className="h-5 w-5 text-primary drop-shadow-[0_0_25px_rgba(240,198,116,0.5)]" aria-hidden="true" />
+              </span>
             </motion.div>
           </div>
           <div className="flex flex-1 flex-col gap-4">
             <div className="space-y-2">
               <h3 className="text-xl font-semibold text-foreground line-clamp-1">{project.title}</h3>
-              <p className="text-sm text-white/60 line-clamp-3">{project.description}</p>
+              <p className="text-sm text-muted line-clamp-3">{project.description}</p>
             </div>
             <div className="flex flex-wrap gap-2">
               {project.tags.slice(0, 3).map((tag) => (

@@ -130,7 +130,7 @@ export function Modal({ open, onClose, title, description, children }: ModalProp
                   {title}
                 </h3>
                 {description ? (
-                  <p id={descriptionId} className="mt-2 text-sm text-white/70">
+                  <p id={descriptionId} className="mt-2 text-sm text-muted">
                     {description}
                   </p>
                 ) : null}
@@ -139,12 +139,12 @@ export function Modal({ open, onClose, title, description, children }: ModalProp
                 aria-label="Cerrar"
                 variant="ghost"
                 onClick={onClose}
-                className="rounded-full p-2 text-white/70 hover:bg-surfaceAlt/60 hover:text-primary"
+                className="rounded-full p-2 text-muted hover:text-primary"
               >
                 <X className="h-5 w-5" aria-hidden="true" />
               </Button>
             </div>
-            <div className="mt-6 space-y-4 text-sm text-white/80">{children}</div>
+            <div className="mt-6 space-y-4 text-sm text-foreground/80">{children}</div>
           </motion.div>
         </motion.div>
       ) : null}

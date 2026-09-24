@@ -7,3 +7,8 @@ out
 .env.test.local
 .env.production.local
 playwright-report
+
+# Datos personales y artefactos locales (no publicar)
+CV_*.docx
+output/
+assets/ChatGPT Image*.png

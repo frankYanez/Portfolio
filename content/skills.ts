@@ -36,9 +36,25 @@ export const skillGroups: Record<string, Skill[]> = {
       name: 'React Native',
       category: 'Mobile',
       description:
-        'Desarrollo de apps móviles con Expo y React Native, integrando autenticación biométrica, navegación avanzada, animaciones con Reanimated y sincronización con APIs REST y servicios en tiempo real.',
+        'Desarrollo de apps móviles con Expo y React Native, integrando autenticación con Google Sign-In, navegación avanzada, animaciones con Reanimated/Moti y eventos en tiempo real con Socket.io.',
       level: 'Avanzado',
-      icon: 'https://cdn.simpleicons.org/react/61DAFB',
+      icon: 'https://cdn.simpleicons.org/expo/FFFFFF',
+    },
+    {
+      name: 'Tailwind CSS',
+      category: 'Estilos',
+      description:
+        'Sistemas de diseño utility-first con tokens, dark mode y componentes accesibles, combinado con Radix UI y shadcn/ui en proyectos productivos.',
+      level: 'Experto',
+      icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
+    },
+    {
+      name: 'Vite',
+      category: 'Build tool',
+      description:
+        'Configuración de proyectos React con Vite para builds rápidos, HMR instantáneo y despliegues optimizados.',
+      level: 'Avanzado',
+      icon: 'https://cdn.simpleicons.org/vite/646CFF',
     },
   ],
 
@@ -66,17 +82,33 @@ export const skillGroups: Record<string, Skill[]> = {
       name: 'Node.js',
       category: 'APIs',
       description:
-        'Diseño de APIs REST y GraphQL con autenticación JWT, colas de mensajería y despliegues serverless en Vercel/AWS. Observabilidad y pruebas contractuales para integraciones críticas.',
+        'Diseño de APIs REST con autenticación, colas de mensajería y despliegues serverless en Vercel. Observabilidad y pruebas contractuales para integraciones críticas.',
       level: 'Avanzado',
       icon: 'https://cdn.simpleicons.org/nodedotjs/339933',
     },
     {
-      name: 'MongoDB / Firebase',
+      name: 'Supabase',
+      category: 'Backend as a Service',
+      description:
+        'Auth, base de datos Postgres, storage y suscripciones en tiempo real como backend principal en ecommerce y apps móviles productivas.',
+      level: 'Avanzado',
+      icon: 'https://cdn.simpleicons.org/supabase/3ECF8E',
+    },
+    {
+      name: 'Firebase',
       category: 'Bases de datos',
       description:
-        'Modelado de datos orientado a producto, triggers en tiempo real y reglas de seguridad para experiencias sincronizadas y escalables.',
+        'Autenticación, Firestore y hosting para experiencias sincronizadas en tiempo real con reglas de seguridad a medida.',
       level: 'Intermedio',
-      icon: 'https://cdn.simpleicons.org/mongodb/47A248',
+      icon: 'https://cdn.simpleicons.org/firebase/FFCA28',
+    },
+    {
+      name: 'Vercel',
+      category: 'Deploy / Infra',
+      description:
+        'Despliegue continuo, preview deployments y edge functions para todos mis proyectos web en producción.',
+      level: 'Avanzado',
+      icon: 'https://cdn.simpleicons.org/vercel/FFFFFF',
     },
   ],
 
@@ -95,7 +127,7 @@ export const skillGroups: Record<string, Skill[]> = {
       description:
         'Diseño de agentes que combinan LLMs, embeddings y reglas de negocio para clasificar, resumir y ejecutar acciones con supervisión humana.',
       level: 'Avanzado',
-      icon: 'https://cdn.simpleicons.org/openai/412991',
+      icon: 'https://cdn.simpleicons.org/langchain/1C3C3C',
     },
   ],
 
@@ -107,6 +139,14 @@ export const skillGroups: Record<string, Skill[]> = {
         'Creación de transiciones fluidas, microinteracciones y animaciones 3D reactivas que elevan la experiencia del usuario, siempre con foco en performance.',
       level: 'Experto',
       icon: 'https://cdn.simpleicons.org/framer/0055FF',
+    },
+    {
+      name: 'GSAP',
+      category: 'Motion Design',
+      description:
+        'Animaciones de scroll, timelines complejas y transiciones cinemáticas en landings y sitios de producto de alto impacto visual.',
+      level: 'Avanzado',
+      icon: 'https://cdn.simpleicons.org/greensock/88CE02',
     },
   ],
 };

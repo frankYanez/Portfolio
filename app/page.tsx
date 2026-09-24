@@ -1,14 +1,17 @@
 'use client';
 import { Header } from '@/components/header';
+import { ViewportGlass } from '@/components/ui/viewport-glass';
 import { Footer } from '@/components/footer';
+import { TechCarousel } from '@/components/sections/tech-carousel';
 import { HeroSection } from '@/components/sections/hero-section';
-import { SkillsSection } from '@/components/sections/skills-section';
-import { SoftSkillsSection } from '@/components/sections/soft-skills-section';
+import { EducationSection } from '@/components/sections/education-section';
+import { ProcessSection } from '@/components/sections/process-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
 import { TimelineSection } from '@/components/sections/timeline-section';
-import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { ContactSection } from '@/components/sections/contact-section';
 import { ServicesSection } from '@/components/sections/services-section';
+import { HireCtaSection } from '@/components/sections/hire-cta-section';
+import { PackagesSection } from '@/components/sections/packages-section';
 
 /**
  * Página principal que compone todas las secciones del landing futurista.
@@ -18,17 +21,22 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col ">
       <Header />
-      <main className="flex flex-col gap-24">
+      <ViewportGlass />
+      <main className="flex flex-col gap-6 sm:gap-8">
         <HeroSection />
-        <ServicesSection />
-        <SkillsSection />
-        <SoftSkillsSection />
-        <ProjectsSection />
+        <TechCarousel />
+        <div id="proyectos">
+          <ServicesSection />
+          <ProjectsSection />
+        </div>
+        <ProcessSection />
+        <PackagesSection />
+        <EducationSection />
         <TimelineSection />
-        <TestimonialsSection />
+        <HireCtaSection />
         <ContactSection />
       </main>
-      <Footer />
+      <div className="pb-16 sm:pb-20"><Footer /></div>
     </div>
   );
 }

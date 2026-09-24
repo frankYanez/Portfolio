@@ -12,15 +12,15 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
  */
 export function Badge({ className, tone = 'neutral', ...props }: BadgeProps) {
   const tones: Record<BadgeTone, string> = {
-    primary: 'bg-primary/15 text-primary shadow-glow',
-    accent: 'bg-accent/15 text-accent shadow-glow',
-    neutral: 'bg-surfaceAlt text-foreground/90'
+    primary: 'border-accent/20 bg-primary/15 text-primary shadow-glow',
+    accent: 'border-accent/20 bg-accent/15 text-accent shadow-glow',
+    neutral: 'border-border/10 bg-surfaceAlt/60 text-foreground/90 shadow-glassSm'
   };
 
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide transition-colors',
+        'inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wide backdrop-blur-xl transition-colors',
         tones[tone],
         className
       )}

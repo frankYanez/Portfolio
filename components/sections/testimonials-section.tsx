@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion';
 import { TestimonialsContent } from '@/content/testimonials';
 import { AnimatedTestimonials } from '@/src/Components/ui/modern-testimonials-slider';
-import { fadeInUp, staggerChildren } from '@/lib/animations';
+import { fadeInUp, inOutViewport, staggerChildren } from '@/lib/animations';
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonios" className="py-16 sm:py-24">
+    <section id="testimonios" className="py-10 sm:py-12">
       <div className="section-container">
         <motion.div
           className="space-y-12"
           initial="hidden"
           whileInView="show"
           variants={staggerChildren}
-          viewport={{ once: true }}
+          viewport={inOutViewport}
         >
           <div className="space-y-6 text-center">
             <motion.h2
@@ -22,7 +22,7 @@ export function TestimonialsSection() {
               Lo que dicen mis aliados
             </motion.h2>
             <motion.p
-              className="mx-auto max-w-2xl text-lg text-white/70"
+              className="mx-auto max-w-2xl text-lg text-muted"
               variants={fadeInUp}
             >
               Resultados reales y colaboraciones éxitosa. La confianza se construye con código de calidad.

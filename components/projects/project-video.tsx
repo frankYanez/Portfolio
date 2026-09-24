@@ -16,7 +16,7 @@ export const ProjectVideo = memo(function ProjectVideo({ video, title }: Project
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+    <div className="relative overflow-hidden rounded-2xl border border-border/10 bg-black/60">
       <video
         className="h-full w-full"
         autoPlay={!shouldReduceMotion}

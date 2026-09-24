@@ -29,7 +29,7 @@ export function SkillsSection() {
           >
             Tecnologías que uso para escalar productos reales
           </motion.h2>
-          <motion.p className="max-w-2xl text-white/70" variants={fadeInUp}>
+          <motion.p className="max-w-2xl text-muted" variants={fadeInUp}>
             Cada herramienta responde a una métrica: tiempos de carga inferiores a un segundo, flujos automatizados que ahorran
             horas de operación y experiencias accesibles para todos los usuarios.
           </motion.p>
@@ -44,13 +44,13 @@ export function SkillsSection() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 ">
           {Object.entries(skillGroups).map(([group, skills]) => (
             <motion.div key={group} {...reveal('up')} className="space-y-4">
-              <h3 className="text-xl font-semibold text-white">{group}</h3>
+              <h3 className="text-xl font-semibold text-foreground">{group}</h3>
               <div className="grid grid-cols-1 gap-4 ">
                 {skills.map((skill) => (
-                  <Card key={skill.name} className="flex flex-col h-48 transition hover:bg-white/10 bg-black">
+                  <Card key={skill.name} className="flex min-h-[12rem] flex-col transition hover:bg-surfaceAlt/40">
                     <div className="flex items-start justify-between gap-4 flex-1">
                       <div className="flex items-start gap-4 flex-1">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                        <div className="glass-chip flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 hover:border-accent/30">
                           <Image
                             src={skill.icon}
                             alt={`${skill.name} icon`}
@@ -60,13 +60,13 @@ export function SkillsSection() {
                           />
                         </div>
                         <div className="flex-1">
-                          <p className="text-lg font-medium text-white">{skill.name}</p>
-                          <p className="text-sm text-white/60">{skill.description}</p>
+                          <p className="text-lg font-medium text-foreground">{skill.name}</p>
+                          <p className="text-sm text-muted">{skill.description}</p>
                         </div>
                       </div>
                       <Badge tone="primary">{skill.level}</Badge>
                     </div>
-                    <p className="mt-3 text-xs uppercase tracking-widest text-white/40">
+                    <p className="mt-3 text-xs uppercase tracking-widest text-muted">
                       {skill.category}
                     </p>
                   </Card>

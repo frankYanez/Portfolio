@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
-import { themeTokens } from './lib/theme';
+
+const withOpacity = (token: string) => `rgb(var(${token}) / <alpha-value>)`;
 
 const config: Config = {
   darkMode: 'class',
@@ -7,25 +8,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: themeTokens.colors.background,
-        surface: themeTokens.colors.surface,
-        surfaceAlt: themeTokens.colors.surfaceAlt,
-        foreground: themeTokens.colors.foreground,
-        muted: themeTokens.colors.muted,
+        background: withOpacity('--color-background'),
+        surface: withOpacity('--color-surface'),
+        surfaceAlt: withOpacity('--color-surface-alt'),
+        foreground: withOpacity('--color-foreground'),
+        muted: withOpacity('--color-muted'),
+        border: withOpacity('--color-border'),
         primary: {
-          DEFAULT: themeTokens.colors.gold,
-          foreground: themeTokens.colors.background
+          DEFAULT: withOpacity('--color-accent'),
+          foreground: withOpacity('--color-accent-foreground')
         },
-        accent: themeTokens.colors.goldSoft
+        accent: {
+          DEFAULT: withOpacity('--color-accent'),
+          soft: withOpacity('--color-accent-soft')
+        }
       },
       backgroundImage: {
-        'gradient-radial': themeTokens.gradients.backdrop,
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, rgba(80,60,20,0.3), transparent 65%)'
+        'gradient-radial': 'var(--gradient-backdrop)',
+        'gradient-accent': 'var(--gradient-accent)'
       },
       boxShadow: {
-        glow: themeTokens.shadows.glow,
-        frosted: themeTokens.shadows.depth
+        glow: 'var(--shadow-glow)',
+        glass: 'var(--shadow-glass-lg)',
+        glassSm: 'var(--shadow-glass-sm)'
+      },
+      borderRadius: {
+        xl2: '1.25rem',
+        '3xl': '1.75rem'
+      },
+      backdropBlur: {
+        xs: '2px'
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }
+        }
+      },
+      animation: {
+        marquee: 'marquee 48s linear infinite'
       }
     }
   },

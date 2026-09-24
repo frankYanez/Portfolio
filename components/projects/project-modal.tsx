@@ -5,6 +5,7 @@ import { Modal } from '@/components/ui/modal';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ProjectVideo } from './project-video';
+import { ThoraMacMockup } from '@/components/showcase/thora-mac-mockup';
 
 export interface ProjectModalProps {
   project: Project;
@@ -18,8 +19,8 @@ export interface ProjectModalProps {
 export function ProjectModal({ project, open, onClose }: ProjectModalProps) {
   return (
     <Modal open={open} onClose={onClose} title={project.title} description={project.description}>
-      <div className="space-y-6 text-sm text-white/80">
-        <ProjectVideo video={project.video} title={project.title} />
+      <div className="space-y-6 text-sm text-foreground/80">
+        {project.customShowcase === 'thora-mac' ? <ThoraMacMockup /> : <ProjectVideo video={project.video} title={project.title} />}
         <p>{project.modalContent}</p>
         <div className="space-y-3">
           <h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Tech stack</h4>
