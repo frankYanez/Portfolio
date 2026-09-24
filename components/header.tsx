@@ -65,11 +65,12 @@ export function Header() {
         <a
           href="#inicio"
           className={cn(
-            'truncate text-sm font-semibold tracking-widest no-underline',
+            'flex min-w-0 flex-col leading-tight no-underline',
             onHero ? 'text-neutral-900 hover:text-neutral-900' : 'text-foreground hover:text-foreground'
           )}
         >
-          {heroContent.name}
+          <span className="truncate text-sm font-semibold tracking-widest">{heroContent.name}</span>
+          <span className="truncate text-[11px] font-bold uppercase tracking-[0.25em] text-gradient-accent">{heroContent.role}</span>
         </a>
 
         <nav aria-label="Principal" className="hidden items-center gap-6 text-sm lg:flex">

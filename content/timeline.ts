@@ -14,19 +14,19 @@ export const timelineIntro = {
   eyebrow: 'Experiencia',
   title: 'Mi recorrido',
   description:
-    'Más de 4 años construyendo productos digitales con React Native, Expo y Next.js: del freelance para clientes de Colombia y Argentina al frontend de una plataforma en producción.',
+    'Más de 4 años construyendo productos digitales con React Native, Expo y Next.js: del freelance para clientes de Colombia y Argentina a Mobile Engineer de una plataforma en producción.',
 };
 
 export const timeline: TimelineItem[] = [
   {
     period: '2024 — Actualidad',
     duration: '2 años',
-    role: 'Frontend Developer',
+    role: 'Mobile Engineer',
     company: 'Chabit',
     context: 'Ticketera Blockchain',
     current: true,
     description:
-      'Desarrollo el frontend mobile de una plataforma de ticketing basada en blockchain con React Native 0.81, Expo SDK 54 y TypeScript strict.',
+      'Lidero el desarrollo de la app mobile de una plataforma de ticketing basada en blockchain con React Native 0.81, Expo SDK 54 y TypeScript strict.',
     achievements: [
       'Arquitectura modular con NativeWind 4, Reanimated 4, TanStack Query v5 y Zustand v5 para el estado global.',
       'Autenticación JWT con refresh token rotation y manejo seguro de sesiones.',

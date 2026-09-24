@@ -2,9 +2,9 @@ import { themeTokens } from './theme';
 
 export const siteConfig = {
   name: 'Francisco Yañez',
-  title: 'Francisco Yañez — Automatizaciones, Desarrollo Web y Aplicaciones',
+  title: 'Francisco Yáñez — Mobile Engineer · React Native, Expo y Next.js',
   description:
-    'Ingeniero de software especializado en automatizaciones con IA, productos web en Next.js y aplicaciones móviles que aceleran operaciones. Trabajo con startups y equipos corporativos para lanzar experiencias medibles y escalables.',
+    'Mobile Engineer con más de 4 años construyendo productos digitales con React Native, Expo y Next.js. Arquitecturas limpias, animaciones avanzadas e integración de IA. Disponible para roles remotos.',
   url: 'https://franciscoyanez.dev',
   locale: 'es-CL',
   email: 'mailto:frankyanez9413@gmail.com',

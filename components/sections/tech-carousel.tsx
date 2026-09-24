@@ -3,24 +3,8 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { reveal } from '@/lib/animations';
-import { skillGroups } from '@/content/skills';
-
-type TechIcon = { name: string; icon: string };
-
-/**
- * Aplana skillGroups y deduplica por nombre para armar la lista de íconos del carrusel.
- */
-function getUniqueTechs(): TechIcon[] {
-  const seen = new Map<string, TechIcon>();
-  Object.values(skillGroups)
-    .flat()
-    .forEach((skill) => {
-      if (!seen.has(skill.name)) {
-        seen.set(skill.name, { name: skill.name, icon: skill.icon });
-      }
-    });
-  return [...seen.values()];
-}
+import { techStack } from '@/content/tech-stack';
+import { cn } from '@/lib/utils';
 
 const fadeMask = {
   maskImage: 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)',
@@ -28,12 +12,11 @@ const fadeMask = {
 };
 
 /**
- * TechCarousel muestra en loop infinito los íconos reales de las tecnologías que uso,
- * con difuminado en ambos extremos.
+ * TechCarousel muestra en loop infinito los íconos (SVG locales) de las tecnologías que uso,
+ * con difuminado en ambos extremos. Los íconos monocromáticos se invierten en tema oscuro.
  */
 export function TechCarousel() {
-  const techs = getUniqueTechs();
-  const track = [...techs, ...techs];
+  const track = [...techStack, ...techStack];
 
   return (
     <motion.div {...reveal('up')} className="group relative mt-6 overflow-hidden py-6 lg:-mt-16" style={fadeMask} aria-label="Tecnologías que utilizo">
@@ -43,9 +26,18 @@ export function TechCarousel() {
           <div
             key={`${tech.name}-${index}`}
             className="glass-chip flex shrink-0 items-center gap-3 whitespace-nowrap rounded-full px-6 py-3.5"
-            aria-hidden={index >= techs.length}
+            aria-hidden={index >= techStack.length}
           >
-            <Image src={tech.icon} alt="" width={36} height={36} className="h-9 w-9 object-contain" aria-hidden="true" />
+            <Image
+              src={tech.icon}
+              alt=""
+              width={32}
+              height={32}
+              unoptimized
+              loading="eager"
+              className={cn('h-8 w-8 object-contain', tech.mono && 'dark:invert')}
+              aria-hidden="true"
+            />
             <span className="text-base font-medium text-foreground">{tech.name}</span>
           </div>
         ))}

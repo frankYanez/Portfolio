@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Smartphone } from 'lucide-react';
 import Image from 'next/image';
 import { heroContent } from '@/content/hero';
 import { Button } from '@/components/ui/button';
@@ -36,9 +36,9 @@ export function HeroSection() {
         {/* Overlay de texto en escritorio: costados libres, centro despejado sobre el rostro. */}
         <div className="absolute inset-0 hidden grid-cols-[1fr_minmax(240px,34%)_1fr] items-center px-10 pt-16 lg:grid xl:px-20">
           <motion.div className="flex flex-col items-start gap-5" {...reveal('left')}>
-            <span className="glass-chip inline-flex items-center gap-2 rounded-full border-black/10 bg-white/50 px-4 py-2 text-[11px] uppercase tracking-[0.35em] text-neutral-800">
-              <Sparkles className="h-4 w-4 text-accent" aria-hidden="true" />
-              Diseños futuristas
+            <span className="glass-chip inline-flex items-center gap-2 rounded-full border-black/10 bg-white/50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-800">
+              <Smartphone className="h-4 w-4 text-accent" aria-hidden="true" />
+              {heroContent.roleStack}
             </span>
             <h1
               id="hero-title"
@@ -47,6 +47,7 @@ export function HeroSection() {
               {heroContent.name.split(' ')[0]}
               <br />
               {heroContent.name.split(' ').slice(1).join(' ')}
+              <span className="mt-3 block pb-1 text-3xl leading-tight text-gradient-accent xl:text-5xl">{heroContent.role}</span>
             </h1>
           </motion.div>
 
@@ -96,11 +97,14 @@ export function HeroSection() {
 
       {/* Contenido apilado en mobile, donde no hay espacio a los costados del rostro. */}
       <div className="section-container flex flex-col items-center gap-6 pb-16 pt-4 text-center lg:hidden">
-        <span className="glass-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.35em] text-foreground">
-          <Sparkles className="h-4 w-4 text-accent" aria-hidden="true" />
-          Diseños futuristas
+        <span className="glass-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-foreground">
+          <Smartphone className="h-4 w-4 text-accent" aria-hidden="true" />
+          {heroContent.roleStack}
         </span>
-        <h1 className="text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl">{heroContent.name}</h1>
+        <h1 className="text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl">
+          {heroContent.name}
+          <span className="mt-2 block pb-1 text-3xl leading-tight text-gradient-accent sm:text-4xl">{heroContent.role}</span>
+        </h1>
         <p className="text-lg font-semibold text-foreground/90">{heroContent.title}</p>
         <p className="max-w-xl text-base text-muted">{heroContent.subtitle}</p>
         <div className="flex flex-wrap items-center justify-center gap-4">

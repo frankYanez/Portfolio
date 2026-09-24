@@ -1,8 +1,10 @@
 export const heroContent = {
   name: 'Francisco Yáñez',
-  title: 'Frontend engineer que crea experiencias digitales inmersivas',
+  role: 'Mobile Engineer',
+  roleStack: 'React Native · Expo',
+  title: 'Apps móviles y experiencias digitales que se sienten nativas',
   subtitle:
-    'Fusiono diseño, tecnología y emoción para construir interfaces modernas, accesibles y de alto rendimiento. Mi misión: transformar ideas en experiencias interactivas que dejan huella.',
+    'Más de 4 años construyendo productos con React Native, Expo y Next.js: arquitecturas limpias, animaciones avanzadas e integración de IA. Hoy, Mobile Engineer en Chabit.',
   primaryCta: {
     label: 'Ver proyectos',
     href: '#proyectos',
